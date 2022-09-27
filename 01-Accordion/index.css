@@ -14,12 +14,23 @@
   border-radius: 8px;
   margin: 0em 0em 1.4em;
   padding: 0.7em 1.4em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .faq .faq_header {
+  width: 100%;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
-  align-items: center;
+}
+
+.faq .answer{
+  display: flex;
+  width: 100%;
+  align-items: flex-start;
 }
 
 .faq h3 {
@@ -48,8 +59,11 @@
   margin: 0em;
   border-radius: 120px;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .hidden {
-  display: none;
+  display: hidden;
 }
