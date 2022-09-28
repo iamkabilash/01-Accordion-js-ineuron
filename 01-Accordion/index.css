@@ -28,7 +28,6 @@
 }
 
 .faq .answer{
-  display: flex;
   width: 100%;
   align-items: flex-start;
 }
@@ -65,5 +64,5 @@
 }
 
 .hidden {
-  display: hidden;
+  display: none;
 }

@@ -28,7 +28,7 @@ faqData.map((faq) => {
   div_header.classList.add("faq_header"); 
 
   const div_answer = document.createElement("div");
-  div_answer.classList.add("answer");
+  div_answer.classList.add("answer", "hidden");
   
   const h3 = document.createElement("h3");
   h3.innerText = faq.question;
@@ -38,6 +38,7 @@ faqData.map((faq) => {
 
   const answer = document.createElement("p");
   answer.innerText = faq.answer;
+
 
   div_header.appendChild(h3);
   div_header.appendChild(button);
@@ -49,17 +50,15 @@ faqData.map((faq) => {
   accordianBody?.appendChild(div_faq);
 });
 
-const button = document.getElementsByTagName("button")[0];
-const answer = document.getElementsByClassName("answer")[0];
+const button = document.getElementsByTagName("button");
+const answer = document.getElementsByClassName("answer");
 
-function showFaq() {
-  answer.classList.toggle("hidden");
+function showFaq(i) {
+  answer[i].classList.toggle("hidden");
+  button[i].innerText === "+" ? button[i].innerText = "-" : button[i].innerText = "+";
 }
 
-button.addEventListener("click", showFaq);
-
-function btnStatusUpdate() {
-  
+for (let i=0; i<button.length; i++){
+  button[i].addEventListener("click", function(){showFaq(i)});
 }
-
 
